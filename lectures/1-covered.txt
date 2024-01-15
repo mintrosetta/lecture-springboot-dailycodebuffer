@@ -23,3 +23,6 @@
     > REST API's
     > Junit of mockito
     
+
+    :: Framework
+    สร้างกรอบงาน วิธีการ โครงสร้าง และฟังก์ชันให้กับเรา
