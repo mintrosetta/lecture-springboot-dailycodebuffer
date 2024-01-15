@@ -1,0 +1,25 @@
+
+    :: What is covered ?
+    > W's of spring 
+        - What is Spring Framework
+        - Advantages of Spring 
+        - Life Cycle of Bean
+        - Dependency Injdection
+        - Spring AOP
+    > All of Spring Boot
+        - What is Spring Boot 
+        - Feathure and Advantages
+        - Building REST API's
+        - Unit Testing (Junit, Mockito)
+    > Spring Data
+        - What is JPA
+        - Using Spring Data JPA
+        - Hibernate
+        - Entity Relationships
+    > Spring Security
+        - Implementing Spring Security 
+        - OAuth 2.0 and OpenId Connect
+        - Complete Login Flow
+    > REST API's
+    > Junit of mockito
+    
