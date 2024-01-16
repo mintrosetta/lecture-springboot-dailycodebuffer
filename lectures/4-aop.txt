@@ -16,3 +16,18 @@
         - ระบุว่า class หรือ method ไหนจะมีการเพิ่ม aspect code เข้าไปได้
     > Advice 
         - ตำแหน่งของ Joint Point ที่จะเพิ่ม Aspect Code เข้าไป สามารถกำหนด Before, After หรือ Around
+
+    :: Annotation
+    @EnacleAspectJAutoProxy
+        - เป็น Annotation ของ AspectJ ใช้ใน class ที่เป็นตัว config bean โดยจะทำให้สามารถเรียกใช้ aspect ได้
+    @Aspect
+        - บอกว่า class นี้เป็น class ที่จะถูกนำไปแทรกในจุด point cut โดย spring aop
+    @Before("execution(* <method>)")
+        - เป็นการบอกว่า method ของ Aspect นี้จะทำงานก่อน method ที่ระบุใน execution
+        - เช่น 
+        @Before("execution(* demo.ShoppingCart.checkout())")
+        public void logger() {
+            System.out.println("Loggers);
+        }
+
+        ในที่นี้ logger() จะถูกเรียกใช้งานเมื่อ checkout() ทำงาน โดย logger() จะทำงานก่อน checkout()
