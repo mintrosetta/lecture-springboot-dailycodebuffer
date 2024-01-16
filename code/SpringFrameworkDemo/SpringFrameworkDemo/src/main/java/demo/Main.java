@@ -17,9 +17,8 @@ public class Main {
         // ดึง Bean ของ class Doctor ที่ถูกสร้างโดย spring-context
         Doctor doctor = context.getBean(Doctor.class);
         doctor.assist();
-        System.out.println(doctor.getQualification());
 
-        Staff nurse = context.getBean(Nurse.class);
+        Nurse nurse = context.getBean(Nurse.class);
         nurse.assist();
     }
 }

@@ -20,3 +20,9 @@
             <property name="qualification" value="MBBS" />
             <property name="nurse" ref="nurse"/>
     -> <constructor-arg></constructor-arg> เป็นการระบุ value ลงไปผ่าน constructor
+    -> <context:component-scan base-package="demo" /> เป็นการสั่งให้ spring-context ไปค้นหา class ที่ระบุ annotation ว่าเป็น bean ทั้งหมด
+    ใน base-package ที่ระบุ
+
+    :: Annotation
+    @Component
+    เป็น annotation บอกว่า class นี้เป็น Bean เพื่อให้ spring-context นำไปสร้าง instance สำหรับ referance

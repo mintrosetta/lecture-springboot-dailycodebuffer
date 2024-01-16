@@ -1,21 +1,10 @@
 package demo;
 
+import org.springframework.stereotype.Component;
+
+@Component // เป็น annotation บอกว่า class นี้เป็น Bean เพื่อให้ spring-context นำไปสร้าง instance สำหรับ referance
 public class Doctor implements Staff {
-    private String qualification;
-
-    public Doctor(String qualification) {
-        this.qualification = qualification;
-    }
-
     public void assist() {
         System.out.println("Doctor is assisting!");
-    }
-
-    public String getQualification() {
-        return qualification;
-    }
-
-    public void setQualification(String qualification) {
-        this.qualification = qualification;
     }
 }
