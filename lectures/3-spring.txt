@@ -25,4 +25,42 @@
 
     :: Annotation
     @Component
-    เป็น annotation บอกว่า class นี้เป็น Bean เพื่อให้ spring-context นำไปสร้าง instance สำหรับ referance
+    - level: class
+    - เป็น annotation บอกว่า class นี้เป็น Bean เพื่อให้ spring-context นำไปสร้าง instance สำหรับ referance
+
+    @Configuration
+    - level: class
+    - Annotation ที่บอก spring ว่าใช้สำหรับกำหนดค่าให้กับ Spring Container เพื่อตั้งค่า Bean
+
+    @ComponentScan
+    - level: class
+    - annotation สำหรับบอก spring ว่าให้เข้าไปค้นหาทุก ๆ class ที่เป็น Bean
+    ใน package แล้วนำมาสร้าง instance สำหรับ referance
+
+    @Bean
+    - level: method
+    - ใช้ระบุว่าเป็น method ที่จะสร้างและส่งคืน object ที่จะถูกจัดการโดย Spring Container และนำไปเก็บใน Spring Application Context
+    ทำให้เราไม่จำเป็นต้องใช้ ComponentScan เพื่อให้ spring เข้าไปค้นหา bean เอง
+
+
+    *** Default Bean จะถูกสร้างแบบ Singleton Scoped คือถูกสร้างแค่ครั้งเดียวและใช้งานได้ซ้ำ ๆ  ***
+
+    :: Scoped
+    > singleton
+        spring จะสร้าง bean แค่ 1 instance
+
+    > prototype
+        สร้าง bean ใหม่ทุกครั้งที่ถูกเรียกใช้ ไม่ได้ถูกจะเก็บไว้ใน ApplicationContext เหมือน Singleton
+
+    > request
+        ใช้ใน Spring MVC, จะสร้าง bean ใหม่ทุกครั้งที่มี Http Request
+
+    > session
+        ใช้ใน Spring MVC, จะสร้าง bean ใหม่ทุกครั้งที่มี Http Session
+
+    > application 
+        ใช้ใน Spring MVC, จะสร้าง bean ใหม่ทุกครั้งที่มี ApplicationContext ใหม่
+
+    > GlobalSession
+
+    *** BeanNameAware เป็น class ใช้สำหรับสืบทอดความสามารถของ method ที่จะถูกเรียกใช้งานทันทีเมื่อ Bean ของ class นั้นถูกสร้างขึ้น ***
