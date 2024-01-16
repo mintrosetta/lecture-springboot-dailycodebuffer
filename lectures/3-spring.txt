@@ -1,0 +1,22 @@
+
+    :: Dependencies Injection in Spring
+    - เราต้องบอก Spring ว่ามี class ที่เราต้องการให้ spring ไปทำการ new ไว้ แล้วเมื่อไหร่ก็ตามที่มี class ที่ต้องการเรียกใช้ class เหล่านั้น
+    ให้ทำการ referance จาก class ที่ต้องการเรียกใช้ไปหาตำแหน่งใน Memory ที่ class ที่ถูกเรียกใช้ถูก new ไว้
+
+    :: Spring Dependencies
+    > spring-context
+        - ใช้ในการจัดการกับ Bean ใน spring โดยจะทำให้สามารถใช้งาน Dependencies Injection และ Inversion of Control
+        - จะทำงานเมื่อ application start โดยจะทำการโหลด Bean ทุก ๆ อันให้กับเรา
+        - Bean คือ class ที่ถูกจัดการโดย spring-context
+        - ApplicationContext เป็นที่รวทของ Bean และสิ่งที่จำเป็นในการสร้างและจัดวางวงจรของโปรแกรม
+
+    :: Configuration bean in XML
+    -> <Beans></Beans> เป็น parent ของการตั้งค่า bean ทั้งหมด
+    -> <bean></bean> เป็นการระบุว่า class อะไรที่เราต้องการให้ spring จัดการ โดยสามารถระบุได้ดังนี้
+        - id        : เป็น id ของ bean 
+        - class     : เป็นการระบุ class ที่ต้องการให้ spring-context จัดการ
+    -> <property></property> เป็นการตั้งค่า prop ของ class ว่าต้องการให้ spring-context ใส่ value หรือ referance ลงไป
+        ตัวอย่าง
+            <property name="qualification" value="MBBS" />
+            <property name="nurse" ref="nurse"/>
+    -> <constructor-arg></constructor-arg> เป็นการระบุ value ลงไปผ่าน constructor

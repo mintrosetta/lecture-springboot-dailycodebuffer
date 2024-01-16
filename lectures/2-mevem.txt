@@ -1,0 +1,6 @@
+
+    > GroupId
+    เป็นการตั้ง Unique id ของ project 
+
+    > ArtifactId
+    เป็นชื่อของโปรเจค
