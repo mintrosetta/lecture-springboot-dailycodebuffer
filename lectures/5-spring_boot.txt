@@ -1,0 +1,10 @@
+
+    :: Spring Boot
+    เป็นส่วนขยายของ Spring Framework สำหรับ Java Developer
+    โดยจะจัดเตรียม Start up template ที่จะรวบรวม dependencies ทั้งหมดไว้ให้เรา
+    โดยมีชื่อว่า Spring Starter
+
+    โดยเราสามารถ deploy spring boot เป็นไฟล์ .jar ได้
+
+    :: Jar file เป็นรูปแบบไฟล์ประเภท package ใช้เพื่อรวบรวม .class, metadata, และทรัพยากรณ์ต่าง ๆ ทีเกี่ยวข้อง เช่น โน๊ต รูปภาพ
+    เสียง เป็นต้น เข้าด้วยกันเป็นไฟล์เดียวสำหรับส่งต่อ
