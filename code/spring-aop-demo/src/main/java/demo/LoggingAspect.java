@@ -24,11 +24,14 @@ public class LoggingAspect {
         System.out.println("after logger");
     }
 
+    // ระบุว่าจะเพิ่ม aspect code เข้าไปที่ class หรือ method อะไร
+    // ใช้เพื่อให้ advice อื่นแทนที่จะระบุ execution(* demo.ShoppingCart.quantity(..)) ซ้ำ ๆ กันไปเรื่อย ๆ ก็มาเรียกใช้ afterReturningPointCut เพื่อเอา pointcut ได้เลย
     @Pointcut("execution(* demo.ShoppingCart.quantity(..))")
     public void afterReturningPointCut() {
 
     }
 
+    // ระบุ advice หรือ ตำแหน่งของ join point ที่เราจะแทรก code เข้าไป โดยที่นี้เราอ้างอิงว่าเราจะเพิ่มเข้าไปที่ class หรือ method จาก Pointcut
     @AfterReturning(pointcut = "afterReturningPointCut()", returning = "retVal")
     public void afterReturning(String retVal) {
         System.out.println("After Returning " + retVal);
